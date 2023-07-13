@@ -64,12 +64,13 @@ CREATE TABLE usuario(
     usu_segdo_nombre VARCHAR(45) COMMENT'Segundo nombre del usuario',
     usu_primer_apellido_usuar VARCHAR(50) NOT NULL COMMENT'Primer apellido del usuario',
     usu_segdo_apellido_usuar VARCHAR(50) NOT NULL COMMENT'segundo apellido del usuario',
+    usu_edad INT UNSIGNED NOT NULL COMMENT 'Edad del usuario',
     usu_telefono VARCHAR(50) NOT NULL COMMENT'telefono del usuario',
     usu_direccion VARCHAR(100) NOT NULL COMMENT'direccion del usuario',
     `usu-e-mail` VARCHAR(100) COMMENT'email del usuario',
     usu_tipodoc INT UNSIGNED NOT NULL COMMENT'id del tipo de documento del usuario',
     usu_genero INT UNSIGNED NOT NULL COMMENT'id del genero del usuario',
-    usu_acudiente INT UNSIGNED NOT NULL COMMENT'id del acudiente del usuario'
+    usu_acudiente INT UNSIGNED COMMENT'id del acudiente del usuario'
 );
 
 /* creacion de la tabla de especialidad */
