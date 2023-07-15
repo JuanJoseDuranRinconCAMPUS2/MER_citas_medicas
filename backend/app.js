@@ -9,6 +9,7 @@ import GConsultorioPaciente from './routes/getConsultoriasPaciente.js';
 import GCitaDate from './routes/getCitaDate.js';
 import GMedicoConst from './routes/getMedicoConst.js';
 import GNumCita from './routes/getNumCita.js';
+import GCitaGenero from './routes/getCitaGenero.js';
 console.clear();
 dotenv.config();
 const appExpress = express();
@@ -22,5 +23,7 @@ appExpress.use("/getConsultorioPaciente", GConsultorioPaciente);
 appExpress.use("/getCitaDates", GCitaDate);
 appExpress.use("/getMedicoConst", GMedicoConst);
 appExpress.use("/getNumCita", GNumCita);
+appExpress.use("/getCitaGenero", GCitaGenero);
+
 const config = JSON.parse(process.env.MY_CONFIG);
 appExpress.listen(config, ()=>{console.log(`http://${config.hostname}:${config.port}`);})
